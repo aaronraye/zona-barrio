@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="ZONA BARRIO">
+  <meta name="author" content="nitlab">
+
+  <title>MAZI Zone Portal</title>
+  <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+  <link href="css/jquery-ui.min.css" rel="stylesheet">
+  <link href="css/index_main.css" rel="stylesheet" type="text/css">
+  <link href="css/plugins/morris.css" rel="stylesheet" type="text/css">
+  <link href="css/font-awesome/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/jquery.datetimepicker.css">
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery-ui.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/index_main.js"></script>
+  <script src="js/moment.js"></script>
+  <script type='text/javascript' src='js/plugins/unitegallery/js/unitegallery.min.js'></script>
+  <link rel='stylesheet' href='js/plugins/unitegallery/css/unite-gallery.css' type='text/css' />
+  <link rel='stylesheet' href='css/languages.min.css' type='text/css' />
+  <script type='text/javascript' src='js/plugins/unitegallery/themes/default/ug-theme-default.js'></script>
+  <link rel='stylesheet' href='js/plugins/unitegallery/themes/default/ug-theme-default.css' type='text/css' />
+  <link rel='stylesheet' href='js/plugins/jvectormap/jquery-jvectormap-2.0.3.css' type='text/css' />
+  
+  <script src="js/index_application.js"></script>
+  
+  <style type="text/css">
+    @media(min-width:768px) {
+      .side-nav {
+        background-color: rgb(43, 115, 197);
+      }
+
+      .side-nav li a:hover,
+      .side-nav li a:focus {
+        background-color: rgb(15, 34, 88) !important;
+      }
+    }
+
+    .side-nav{
+        background-color: rgb(43, 115, 197) !important;
+    }
+
+    .navbar-inverse .navbar-nav > .active > a,
+    .navbar-inverse .navbar-nav > .active > a:hover,
+      .navbar-inverse .navbar-nav > .active > a:focus {
+      background-color: rgb(15, 34, 88) !important;
+    }
+
+    .side-nav li a:hover,
+    .side-nav li a:focus {
+      background-color: rgb(15, 34, 88) !important;
+    }
+
+    .top-nav>li>a:hover,
+    .top-nav>li>a:focus,
+    .top-nav>.open>a,
+    .top-nav>.open>a:hover,
+    .top-nav>.open>a:focus {
+      background-color: #16394d !important;
+    }
+
+    .navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
+      background-color: #2f7fad  !important;
+    }
+
+    .bot-nav{
+      background-color: #2f7fad  !important;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="wrapper">
+
+    
+    
+    
+    
+    
+    
+    
+
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" id="wide-navigation">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index">ZONA BARRIO</a>
+      </div>
+      <ul class="nav navbar-right top-nav">
+        <li>
+          <a class="navbar-brand pull-right" target="_blank" href="/index_documentation" style="font-size: 14px;"> Documentacion</a>
+        </li>
+        <li>
+          <a class="navbar-brand pull-right" target="_blank" href="http://mazizone.eu/toolkit" style="font-size: 14px;">"MAZI Project"</a>
+        </li>
+        <li>
+          <div class="navbar-brand pull-right" id="time"></div>
+        </li>
+        
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-bell"></i> <span class='notif-span'>1</span> <b class="caret"></b></a>
+          <ul class="dropdown-menu alert-dropdown">
+            
+            
+            <li>
+              <a href="#" class="show-notification-button" id="show-notification-button-1" data-toggle="modal" data-target="#show-notification-modal-1">
+                <span class="label label-success">New</span> Welcome
+              </a>
+            </li>
+            
+          </ul>
+        </li>
+        
+        <li class="dropdown">
+		<a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="lang-lbl-full" lang="en"></span></a>
+          <ul class="dropdown-menu alert-dropdown">
+            
+            <li>
+              <a href="#" class="language-button" id="en-language-button" data-toggle="dropdown"><span class="lang-lbl-full" lang="en"></span></a>
+            </li>
+            
+            <li>
+              <a href="#" class="language-button" id="el-language-button" data-toggle="dropdown"><span class="lang-lbl-full" lang="el"></span></a>
+            </li>
+            
+            <li>
+              <a href="#" class="language-button" id="fr-language-button" data-toggle="dropdown"><span class="lang-lbl-full" lang="fr"></span></a>
+            </li>
+            
+            <li>
+              <a href="#" class="language-button" id="ar-language-button" data-toggle="dropdown"><span class="lang-lbl-full" lang="ar"></span></a>
+            </li>
+            
+            <li>
+              <a href="#" class="language-button" id="tr-language-button" data-toggle="dropdown"><span class="lang-lbl-full" lang="tr"></span></a>
+            </li>
+            
+            <li>
+              <a href="#" class="language-button" id="zh-hans-language-button" data-toggle="dropdown"><span class="lang-lbl-full" lang="zh"></span></a>
+            </li>
+            
+          </ul>
+        </li>
+      </ul>
+      <div class="collapse navbar-collapse navbar-ex1-collapse">
+        <ul class="nav navbar-nav side-nav">
+          <li class="active">
+            <a href="index"><i class="fa fa-fw fa-laptop"></i> Apps</a>
+          </li>
+          <li >
+            <a href="index_system"><i class="fa fa-fw fa-chart-bar"></i> Info </a>
+          </li>
+          
+          
+          
+        </ul>
+      </div>
+    </nav>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" id="narrow-navigation">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index">MAZI Zone Portal</a>
+        <ul class="nav navbar-right top-nav pull-right">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="lang-lbl-full" lang="en"></span></a>
+            <ul class="dropdown-menu alert-dropdown">
+              
+              <li>
+                <a href="#" class="language-button" id="en-language-button" data-toggle="dropdown"><span class="lang-lbl-full" lang="en"></span></a>
+              </li>
+              
+              <li>
+                <a href="#" class="language-button" id="el-language-button" data-toggle="dropdown"><span class="lang-lbl-full" lang="el"></span></a>
+              </li>
+              
+              <li>
+                <a href="#" class="language-button" id="fr-language-button" data-toggle="dropdown"><span class="lang-lbl-full" lang="fr"></span></a>
+              </li>
+              
+              <li>
+                <a href="#" class="language-button" id="ar-language-button" data-toggle="dropdown"><span class="lang-lbl-full" lang="ar"></span></a>
+              </li>
+              
+              <li>
+                <a href="#" class="language-button" id="tr-language-button" data-toggle="dropdown"><span class="lang-lbl-full" lang="tr"></span></a>
+              </li>
+              
+              <li>
+                <a href="#" class="language-button" id="zh-hans-language-button" data-toggle="dropdown"><span class="lang-lbl-full" lang="zh"></span></a>
+              </li>
+              
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="collapse navbar-collapse navbar-ex1-collapse">
+        <ul class="nav navbar-nav side-nav">
+          <li class="active">
+            <a href="index"><i class="fa fa-fw fa-laptop"></i> Applications</a>
+          </li>
+          <li >
+            <a href="index_system"><i class="fa fa-fw fa-chart-bar"></i> System</a>
+          </li>
+          
+          
+          
+          <li>
+            <a target="_blank" href="/index_documentation"><i class="fa fa-fw fa-book"></i> Documentation</a>
+          </li>
+          <li>
+            <a target="_blank" href="http://mazizone.eu/toolkit"><i class="fa fa-fw fa-external-link-square"></i> MAZI Project</a>
+          </li>
+          
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-bell"></i> <span class='notif-span'>1</span> <b class="caret"></b></a>
+            <ul class="dropdown-menu alert-dropdown">
+              
+              
+              <li>
+                <a href="#" class="show-notification-button" id="show-notification-button-1" data-toggle="modal" data-target="#show-notification-modal-1">
+                  <span class="label label-success">New</span> Welcome
+                </a>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li>
+            <div id="time2" style="color:  white; padding-right: 10px;" class="pull-right"></div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+
+    <div id="page-wrapper">
+      <div class="container-fluid">
+
+        
+        <div class="jumbotron">
+  <h1>MAZI Zone <small>Applications</small></h1>
+  <p class='welcome-txt'> Welcome to the MAZI Zone Applications Portal, please
+    use the links bellow to navigate to the applications offered by this MAZI Zone. </p>
+</div>
+
+<div class="row app-row" style="background: url('images/mazi-background.jpg'); background-size: cover;">
+  
+  
+  
+    
+    
+    
+  <div class="col-xl-3 col-lg-3 col-md-4 col-sm-12">
+    <div class="panel panel-green app-panel">
+      <div class="panel-heading">
+        <a target="_blank" href="http://local.mazizone.eu:9001" class="app-link" id="app_link_2">
+          <div class="row">
+            <div class="col-xs-3">
+              <i class="fa fa-5x fa-file-alt"></i>
+            </div>
+            <div class="col-xs-9 text-center">
+              <div class="huge">Etherpad</div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-11 text-justify">
+              <p class="panel-desc panel-desc-txt-block">This is an Etherpad default instance. The users of this MAZI zone can use it to create new shared pads for collaborative editing.</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+  
+    
+    
+    
+    
+  <div class="col-xl-3 col-lg-3 col-md-4 col-sm-12">
+    <div class="panel panel-yellow app-panel">
+      <div class="panel-heading">
+        <a target="_blank" href="http://local.mazizone.eu:8081/" class="app-link" id="app_link_4">
+          <div class="row">
+            <div class="col-xs-3">
+              <i class="fa fa-5x fa-book"></i>
+            </div>
+            <div class="col-xs-9 text-center">
+              <div class="huge">GuestBook</div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-11 text-justify">
+              <p class="panel-desc panel-desc-txt-block">The MAZI Guest Book is an open source application that can used in events enabling the audience to share their thoughts, photos, etc</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+  
+    
+    
+    
+  <div class="col-xl-3 col-lg-3 col-md-4 col-sm-12">
+    <div class="panel panel-purple app-panel">
+      <div class="panel-heading">
+        <a target="_blank" href="http://local.mazizone.eu/framadate" class="app-link" id="app_link_5">
+          <div class="row">
+            <div class="col-xs-3">
+              <i class="fa fa-5x fa-question"></i>
+            </div>
+            <div class="col-xs-9 text-center">
+              <div class="huge">FramaDate</div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-11 text-justify">
+              <p class="panel-desc panel-desc-txt-block">This is a FramaDate default instance. The users of this MAZI zone can use it to create new polls and surveys.</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+  
+    
+    
+    
+    
+  <div class="col-xl-3 col-lg-3 col-md-4 col-sm-12">
+    <div class="panel panel-teal app-panel">
+      <div class="panel-heading">
+        <a target="_blank" href="http://local.mazizone.eu:9091" class="app-link" id="app_link_10">
+          <div class="row">
+            <div class="col-xs-3">
+              <i class="fa fa-5x fa-file-audio"></i>
+            </div>
+            <div class="col-xs-9 text-center">
+              <div class="huge">Interview</div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-11 text-justify">
+              <p class="panel-desc panel-desc-txt-block">This is the interview archive application.	</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+  
+    
+    
+    
+  <div class="col-xl-3 col-lg-3 col-md-4 col-sm-12">
+    <div class="panel panel-red app-panel">
+      <div class="panel-heading">
+        <a target="_blank" href="http://local.mazizone.eu/nextcloud/index.php/s/bHYnzswsAofks37" class="app-link" id="app_link_13">
+          <div class="row">
+            <div class="col-xs-3">
+              <i class="fa fa-cloud fa-5x"></i>
+            </div>
+            <div class="col-xs-9 text-center">
+              <div class="huge">Documents</div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-11 text-justify">
+              <p class="panel-desc panel-desc-txt-block">Shared folder for uploading photos.</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+  
+    
+    
+    
+  <div class="col-xl-3 col-lg-3 col-md-4 col-sm-12">
+    <div class="panel panel-red app-panel">
+      <div class="panel-heading">
+        <a target="_blank" href="http://local.mazizone.eu/nextcloud/index.php/s/TbmynZmXzLmN7Eb" class="app-link" id="app_link_14">
+          <div class="row">
+            <div class="col-xs-3">
+              <i class="fa fa-cloud fa-5x"></i>
+            </div>
+            <div class="col-xs-9 text-center">
+              <div class="huge">Photos</div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-11 text-justify">
+              <p class="panel-desc panel-desc-txt-block">Shared folder for uploading documents.</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+  
+</div>
+
+
+      </div>
+    </div>
+
+
+    
+
+    <div class="modal fade" id="show-notification-modal-1" role="dialog">
+      <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header notification-modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Welcome</h4>
+          </div>
+          <div class="modal-body">
+            <p>
+              Welcome to this Mazizone, you can use this portal to navigate to the various applications offered by this hub.
+            </p>
+          </div>
+          <div class="modal-footer notification-modal-footer">
+            <button type="button" class="btn btn-default notification-close" data-dismiss="modal" id="notification-close-1">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+
+  <script type="text/javascript">
+    function showDate(date, o){
+      var newdate = moment(date).add(o, 'milliseconds');
+      $("#time").text(newdate.format("D MMM YYYY HH:mm zz"));
+      $("#time2").text(newdate.format("D MMM YYYY HH:mm zz"));
+      setTimeout(function () { showDate(newdate, 10000); }, 10000);
+    }
+
+    var mom = null;
+    if(navigator.userAgent.indexOf("Firefox") != -1 ){
+      mom = moment('2020-10-29 19:33:49+0000');
+    }
+    else{
+      mom = moment(Date.parse('2020-10-29 19:33:49 +0000'));
+    }
+    showDate(mom, 0);
+  </script>
+</body>
+</html>
